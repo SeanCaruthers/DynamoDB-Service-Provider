@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+
+  <Target Name="RemoveBinaryDuringClean" AfterTargets="Clean">
+    <RemoveDir Directories="$(OUTDIR)"></RemoveDir>
+  </Target>
+
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.7.0.92" />
+  </ItemGroup>
+</Project>
